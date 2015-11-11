@@ -64,7 +64,7 @@ li:hover {
 	padding-left: 15px;
 }
 
-div.dateAndSender {
+#dateAndSender {
 	height: 30px;
 	width: 100%;
 	background-color: #2980b9;
@@ -72,10 +72,10 @@ div.dateAndSender {
 	border-top-left-radius: 5px;
 }
 
-div.messageDate {
+#messageDate {
 	font-size: 1.2em;
 	height: 30px;
-	width: 25%;
+	width: 40%;
 	background-color: #2980b9;
 	color: white;
 	display: inline-block;
@@ -86,10 +86,10 @@ div.messageDate {
 	border-bottom: 1px solid #085BFF;
 }
 
-div.messageSender {
+#messageSender {
 	font-size: 1.2em;
 	height: 30px;
-	width: 70%;
+	width: 55%;
 	background-color: #2980b9;
 	color: white;
 	position: relative;
@@ -101,7 +101,7 @@ div.messageSender {
 	border-bottom: 1px solid #085BFF;
 }
 
-div.messageSubject {
+#messageSubject {
 	font-size: 1.2em;
 	height: 30px;
 	width: 100%;
@@ -113,7 +113,7 @@ div.messageSubject {
 	border-bottom: 1px solid #085BFF;
 }
 
-div.messageBody {
+#messageBody {
 	font-size: 1em;
 	height: 80px;
 	width: 100%;

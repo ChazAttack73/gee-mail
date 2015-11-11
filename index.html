@@ -7,8 +7,12 @@
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        
-      };
+        	document.getElementById('messageDate').innerHTML = getRandomDate();
+        	document.getElementById('messageSender').innerHTML = getRandomElement(sender);
+        	document.getElementById('messageSubject').innerHTML = getRandomElement(subject);
+        	document.getElementById('messageBody').innerHTML = getRandomElement(body);
+
+      	};
     </script>
 	</head>
 	<body>
@@ -29,40 +33,27 @@
 
 				<div class="messageArea">
 					<p id="messageHeader">Inbox</p>
-						<div class="dateAndSender">
-							<div class="messageDate">rando date</div>
-							<div class="messageSender">rando sender</div>
+						<div id="messageBox">
+							<div id="dateAndSender">
+								<div id="messageDate">Date:</div>
+								<div id="messageSender">Sender:</div>
+							</div>
+							
+							<div id="messageSubject">Subject:</div>
+							
+							<div id="messageBody"></div>
 						</div>
-						<div class="messageSubject">rando subject</div>
-						<div class="messageBody">rando message body</div>
 
-						<div class="dateAndSender">
-							<div class="messageDate">rando date</div>
-							<div class="messageSender">rando sender</div>
+						<div id="messageBox">
+							<div id="dateAndSender">
+								<div id="messageDate">Date:</div>
+								<div id="messageSender">Sender:</div>
+							</div>
+							
+							<div id="messageSubject">Subject:</div>
+							
+							<div id="messageBody"></div>
 						</div>
-						<div class="messageSubject">rando subject</div>
-						<div class="messageBody">rando message body</div>
-
-						<div class="dateAndSender">
-							<div class="messageDate">rando date</div>
-							<div class="messageSender">rando sender</div>
-						</div>
-						<div class="messageSubject">rando subject</div>
-						<div class="messageBody">rando message body</div>
-
-						<div class="dateAndSender">
-							<div class="messageDate">rando date</div>
-							<div class="messageSender">rando sender</div>
-						</div>
-						<div class="messageSubject">rando subject</div>
-						<div class="messageBody">rando message body</div>
-
-						<div class="dateAndSender">
-							<div class="messageDate">rando date</div>
-							<div class="messageSender">rando sender</div>
-						</div>
-						<div class="messageSubject">rando subject</div>
-						<div class="messageBody">rando message body</div>
 				</div>
 			</div>
 		</div>
