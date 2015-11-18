@@ -7,12 +7,54 @@
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        	document.getElementById('messageDate').innerHTML = getRandomDate();
-        	document.getElementById('messageSender').innerHTML = getRandomElement(sender);
-        	document.getElementById('messageSubject').innerHTML = getRandomElement(subject);
-        	document.getElementById('messageBody').innerHTML = getRandomElement(body);
+        	for(var index = 0; index < window.geemails.length; index++){
+    			var date = document.getElementById('date');
+    			var sender = document.getElementById('sender');
+    			var subject = document.getElementById('subject');
+    			var body = document.getElementById('body');
 
-      	};
+    			var newMessageBox = document.createElement('div');
+    			newMessageBox.className = 'messageBox';
+    			document.getElementById('messageBox').appendChild(newMessageBox);
+    
+    			var firstDate = document.createElement('div');
+    			firstDate.id = 'date';
+    			firstDate.innerHTML = window.geemails[index].date.toDateString();
+    			messageBox.appendChild(firstDate);
+
+    			var firstSender = document.createElement('div');
+    			firstSender.id = 'sender';
+    			firstSender.innerHTML = window.geemails[index].sender;
+    			messageBox.appendChild(firstSender);
+
+    			var firstSubject = document.createElement('div');
+    			firstSubject.id = 'subject';
+    			firstSubject.innerHTML = window.geemails[index].subject;
+    			messageBox.appendChild(firstSubject);
+
+    			var firstBody = document.createElement('div');
+    			firstBody.id = 'body';
+    			firstBody.innerHTML = window.geemails[index].body;
+    			messageBox.appendChild(firstBody);
+    			
+    			var showMessage = document.getElementById('messageBox');
+    			showMessage.addEventListener('click', toggle);
+    			
+    		}
+    			function toggle() {
+    				var showBody = document.getElementById('body').style.display;
+    				if (showBody = 'none') {
+    					document.getElementById('body').style.display = 'inline-block';
+    				}else {
+    					document.getElementById('body').style.display = 'none';
+    				}
+    				}
+
+				var counter = document.getElementById('counter');
+				var messageCount = window.geemails.length;
+				document.getElementById('counter').innerHTML = [messageCount] + ' New Messages!';
+    };
+
     </script>
 	</head>
 	<body>
@@ -31,28 +73,9 @@
 					</ul>
 				</div>
 
-				<div class="messageArea">
-					<p id="messageHeader">Inbox</p>
-						<div id="messageBox">
-							<div id="dateAndSender">
-								<div id="messageDate">Date:</div>
-								<div id="messageSender">Sender:</div>
-							</div>
-							
-							<div id="messageSubject">Subject:</div>
-							
-							<div id="messageBody"></div>
-						</div>
-
-						<div id="messageBox">
-							<div id="dateAndSender">
-								<div id="messageDate">Date:</div>
-								<div id="messageSender">Sender:</div>
-							</div>
-							
-							<div id="messageSubject">Subject:</div>
-							
-							<div id="messageBody"></div>
+				<div id="messageArea">
+					<p id="messageHeader">Inbox</p><div id='counter'></div>
+						<div id='messageBox' class='messageBox'>
 						</div>
 				</div>
 			</div>

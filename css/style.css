@@ -29,10 +29,12 @@ div#container {
 	float: left;
 }
 
-.messageArea {
+#messageArea {
 	width: auto;
 	height: 100%;
 	background-color: #bdc3c7;
+	padding: 15px;
+	padding-left: 265px;
 }
 
 li {
@@ -50,11 +52,6 @@ li:hover {
 	padding-left: 25px;
 }
 
-.messageArea {
-	padding: 15px;
-	padding-left: 265px;
-}
-
 #messageHeader {
 	font-size: 2em;
 	background-color: #3498db;
@@ -64,56 +61,59 @@ li:hover {
 	padding-left: 15px;
 }
 
-#dateAndSender {
-	height: 30px;
-	width: 100%;
-	background-color: #2980b9;
-	margin-top: 15px;
-	border-top-left-radius: 5px;
+#counter {
+	font-size: 1.5em;
+	display: inline;
 }
 
-#messageDate {
+#messageBox {
+	height: 30px;
+	width: 100%;
+	background-color: #bdc3c7;
+	margin: 5px;
+}
+
+#date {
 	font-size: 1.2em;
 	height: 30px;
-	width: 40%;
+	width: 15%;
+	display: inline-block;
 	background-color: #2980b9;
 	color: white;
-	display: inline-block;
-	margin-right: 0px;
 	padding: 5px;
 	border-top-left-radius: 5px;
 	border-left: 1px solid #085BFF;
 	border-bottom: 1px solid #085BFF;
 }
 
-#messageSender {
+#sender {
 	font-size: 1.2em;
 	height: 30px;
-	width: 55%;
+	width: 30%;
+	display: inline-block;
+	background-color: #2980b9;
+	color: white;
+	padding: 5px;
+	border-top-left-radius: 5px;
+	border-left: 1px solid #085BFF;
+	border-bottom: 1px solid #085BFF;
+}
+
+#subject {
+	font-size: 1.2em;
+	height: 30px;
+	width: 54%;
 	background-color: #2980b9;
 	color: white;
 	position: relative;
 	display: inline-block;
-	margin-left: 0px;
-	padding: 5px;
-	border-top-left-radius: 5px;
-	border-left: 1px solid #085BFF;
-	border-bottom: 1px solid #085BFF;
-}
-
-#messageSubject {
-	font-size: 1.2em;
-	height: 30px;
-	width: 100%;
-	background-color: #2980b9;
-	color: white;
-	position: relative;
 	padding: 5px;
 	border-left: 1px solid #085BFF;
 	border-bottom: 1px solid #085BFF;
 }
 
-#messageBody {
+#body {
+	display: none;
 	font-size: 1em;
 	height: 80px;
 	width: 100%;
